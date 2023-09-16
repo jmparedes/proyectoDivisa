@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convertidor de moneda</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet-->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="wrapper">
+      <!-- Detalles de la aplicación -->
+      <div class="app-details">
+        <img src="img/vector2.jpg"class="app-icon" alt="Ícono de la aplicación">
+        <h1 class="app-title">Cambio de Moneda</h1>
+      </div>
+      
+      <!-- Etiqueta y campo de entrada para la cantidad -->
+      <label for="amount">Cantidad:</label>
+      <input type="number" id="amount" value="10" placeholder="Ingrese la cantidad" />
+
+      <!-- Contenedor de las cajas de selección de divisas de origen -->
+      <div class="dropdown">
+        <h2 class="dropdown-title">Divisa de Origen:</h2>
+        <div class="custom-select">
+          <select id="from-currency-select">
+            <!-- Opciones de moneda de origen -->
+          </select>
+          <div class="select-arrow"></div>
+        </div>
+      </div>
+
+      <!-- Contenedor de las cajas de selección de divisas de destino -->
+      <div class="dropdown">
+        <h2 class="dropdown-title">Divisa de Destino:</h2>
+        <div class="custom-select">
+          <select id="to-currency-select">
+            <!-- Opciones de moneda de destino -->
+          </select>
+          <div class="select-arrow"></div>
+        </div>
+      </div>
+
+      <!-- Botón de conversión -->
+      <button id="convert-button">Convertir</button>
+
+      <!-- Resultado de la conversión -->
+      <p id="result"></p>
+    </div>
+
+    <!-- Scipt Con Array De Códigos De Moneda -->
+    <script src="js/currency-codes.js"></script>
+    <!-- Script Con Clave de API -->
+    <!-- <script src="js/api_key.js"></script> -->
+    <!-- Script Principal -->
+    <script src="js/script.js"></script>
+</body>
+</html>

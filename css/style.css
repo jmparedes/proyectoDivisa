@@ -1,0 +1,191 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  outline: none;
+}
+
+body {
+  background-color: #42A5F5; /* Azul claro */
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 25em;
+  background-color: #ffffff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  border-radius: 0.8em;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.app-details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.app-icon {
+  width: 9.37em;
+  max-width: 100%;
+}
+
+.app-title {
+  font-size: 1.6em;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  color: #64B5F6; /* Azul claro */
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  color: #7A7A7A; /* Gris para las etiquetas */
+}
+
+input#amount {
+  font-weight: 400;
+  font-size: 1.2em;
+  display: block;
+  width: 100%;
+  border-bottom: 2px solid #2196F3; /* Azul */
+  color: #7A789D; /* Gris azulado para el texto */
+  margin-bottom: 2em;
+  padding: 0.5em;
+}
+
+input#amount:focus {
+  color: #42A5F5; /* Azul claro cuando enfocado */
+  border-color: #42A5F5; /* Azul claro cuando enfocado */
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.custom-select {
+  position: relative;
+}
+
+.select-arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 6px 0 6px;
+  border-color: #1d2f3d transparent transparent transparent;
+  pointer-events: none;
+}
+
+.dropdown-title {
+  font-size: 1.1em;
+  margin-bottom: 0.5em;
+  color: #2196F3;
+}
+
+select {
+  width: 100%;
+  padding: 0.6em;
+  font-size: 1em;
+  border-radius: 0.2em;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 15px top 50%, center;
+  background-size: 20px 20px;
+  background-color: #42A5F5; /* Cambiar el color de fondo a azul */
+  color: #ffffff;
+}
+
+select option {
+  background-color: #ffffff;
+  color: #2196F3; /* Azul */
+}
+
+button {
+  font-size: 1em;
+  background-color: #2196F3; /* Azul */
+  padding: 1em 0;
+  margin-top: 2em;
+  border-radius: 0.3em;
+  color: #ffffff;
+  font-weight: 600;
+  width: 100%; /* Hace que el botón ocupe todo el ancho */
+  max-width: 100%; /* Evita que el botón sea más ancho que su contenedor */
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #1976D2; /* Cambio de color al pasar el cursor */
+}
+
+#result {
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 1em;
+  color: #2196F3; /* Azul */
+  background-color: #E5DBFF; /* Fondo violeta claro */
+  padding: 0.8em 0;
+}
+/* Estilos para pantallas más pequeñas (ejemplo: dispositivos móviles) */
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 100%; /* Ocupar todo el ancho de la pantalla */
+    padding: 1em; /* Reducir el espacio interior */
+  }
+
+  .app-icon {
+    width: 7em; /* Reducir el tamaño del icono */
+  }
+
+  .app-title {
+    font-size: 1.2em; /* Reducir el tamaño del título */
+  }
+
+  label {
+    font-size: 0.9em; /* Reducir el tamaño de la etiqueta */
+  }
+
+  input#amount {
+    font-size: 1em; /* Ajustar el tamaño del campo de entrada */
+    margin-bottom: 1em; /* Reducir el espacio inferior */
+  }
+
+  .dropdown {
+    gap: 0.5em; /* Reducir el espacio entre las cajas de selección */
+  }
+
+  .select-arrow {
+    right: 5px; /* Ajustar la posición de la flecha */
+  }
+
+  .dropdown-title {
+    font-size: 1em; /* Ajustar el tamaño del título de la caja de selección */
+    margin-bottom: 0.3em; /* Reducir el espacio inferior */
+  }
+
+  select {
+    font-size: 0.9em; /* Ajustar el tamaño de la fuente de la selección */
+  }
+
+  button {
+    font-size: 0.9em; /* Ajustar el tamaño del botón */
+  }
+
+  #result {
+    font-size: 1em; /* Ajustar el tamaño del resultado */
+    margin-top: 0.5em; /* Reducir el espacio superior */
+  }
+}
